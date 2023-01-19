@@ -1,8 +1,7 @@
 # Number game 
 from random import randint
 
-answer = True
-points=100
+points=10
 
 level = input("What level would you like to play? Easy/Medium/Hard: ")
 
@@ -18,23 +17,23 @@ elif(level=="Hard"):
 else:
     print("Invalid Input")
 
-while(answer==True):
-    guess = int(input("Enter your number: "))
-    print("")
-    print(f"Total Points: {points}")
-    print("")
-    if(guess==generatedNum):
-        print("Your guess is right.")
-        answer = False
-    else:
-        print("Your guess was incorrect.")
+for i in range(0,10):
+        guess = int(input("Enter your number: "))
         print("")
-        points = points-1
-        if(generatedNum>guess):
-            print(f"Hint: Try quessing something bigger than {guess}.")
+        print(f"Total Points: {points}")
+        print("")
+        if(guess==generatedNum):
+            print("Your guess is right.")
+            break
+        else:
+            print("Your guess was incorrect.")
             print("")
-            continue
-        elif(generatedNum<guess):
-            print(f"Hint: Try guessing something smaller than {guess}.")
-            print("")
-            continue
+            points = points-1
+            if(generatedNum>guess):
+                print(f"Hint: Try quessing something bigger than {guess}.")
+                print("")
+                continue
+            elif(generatedNum<guess):
+                print(f"Hint: Try guessing something smaller than {guess}.")
+                print("")
+                continue
