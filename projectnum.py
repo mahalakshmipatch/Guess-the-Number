@@ -31,10 +31,10 @@ while(answer==True):
         print("")
         points = points-1
         if(generatedNum>guess):
-            print("Hint: Try quessing something bigger.")
+            print(f"Hint: Try quessing something bigger than {guess}.")
             print("")
             continue
         elif(generatedNum<guess):
-            print("Hint: Try guessing something smaller.")
+            print(f"Hint: Try guessing something smaller than {guess}.")
             print("")
             continue
